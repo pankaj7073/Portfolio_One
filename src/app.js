@@ -28,7 +28,7 @@ app.post("/", async (req, res) => {
       message: req.body.message,
     });
     const result = await data.save();
-    res.status(200).render("index");
+    res.status(200).render("index", { data: "Form Successfully Send" });
   } catch (error) {
     console.log(error);
     res.send("Something Went Wrong");
